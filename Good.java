@@ -1,3 +1,174 @@
+package class1;
+
+import java.util.Scanner;
+
+abstract class ShinchanMerchandiseFactory {
+	abstract public void createTShirt();
+
+	abstract public void createHat();
+
+	abstract public void createToy();
+}
+
+class ShinchanSummerMerchandiseFactory extends ShinchanMerchandiseFactory {
+
+	@Override
+	public void createTShirt() {
+
+		System.out.println("Create Summer TShirt..");
+		new ShinchanSummerTShirt().displayDesign();
+	}
+
+	@Override
+	public void createHat() {
+
+		System.out.println("Create Summer Hat..");
+		new ShinchanSummerHat().displayColor();
+	}
+
+	@Override
+	public void createToy() {
+
+		System.out.println("Create Summer Toy..");
+		new ShinchanSummerToy().displaySize();
+	}
+
+}
+
+class ShinchanWinterMerchandiseFactory extends ShinchanMerchandiseFactory {
+
+	@Override
+	public void createTShirt() {
+
+		System.out.println("Create Winter TShirt..");
+		new ShinchanWinterTShirt().displayDesign();
+	}
+
+	@Override
+	public void createHat() {
+
+		System.out.println("Create Winter Hat..");
+		new ShinchanWinterHat().displayColor();
+	}
+
+	@Override
+	public void createToy() {
+
+		System.out.println("Create Winter Toy..");
+		new ShinchanWinterToy().displaySize();
+	}
+
+}
+
+abstract class ShinchanTShirt {
+	abstract public void displayDesign();
+}
+
+abstract class ShinchanHat {
+	abstract public void displayColor();
+}
+
+abstract class ShinchanToy {
+	abstract public void displaySize();
+}
+
+class ShinchanSummerTShirt extends ShinchanTShirt {
+
+	@Override
+	public void displayDesign() {
+
+		System.out.println("ShinchanSummerTShirt Size..");
+	}
+
+}
+
+class ShinchanSummerHat extends ShinchanHat {
+
+	@Override
+	public void displayColor() {
+
+		System.out.println("ShinchanSummerHat Size..");
+	}
+
+}
+
+class ShinchanSummerToy extends ShinchanToy {
+
+	@Override
+	public void displaySize() {
+
+		System.out.println("ShinchanSummerToy Size..");
+	}
+
+}
+
+class ShinchanWinterTShirt extends ShinchanTShirt {
+
+	@Override
+	public void displayDesign() {
+
+		System.out.println("ShinchanWinterTShirt Size..");
+	}
+
+}
+
+class ShinchanWinterHat extends ShinchanHat {
+
+	@Override
+	public void displayColor() {
+
+		System.out.println("ShinchanWinterHat Size..");
+	}
+
+}
+
+class ShinchanWinterToy extends ShinchanToy {
+
+	@Override
+	public void displaySize() {
+
+		System.out.println("ShinchanWinterToy Size..");
+	}
+
+}
+
+public class Class1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Choice: ");
+		System.out.println("-Summer");
+		System.out.println("-Winter");
+		String input = sc.next();
+		if (input.equalsIgnoreCase("Summer")) {
+			String choice = sc.next();
+			if (choice.equalsIgnoreCase("TShirt")) {
+				new ShinchanSummerMerchandiseFactory().createTShirt();
+			} else if (choice.equalsIgnoreCase("Hat")) {
+				new ShinchanSummerMerchandiseFactory().createHat();
+			} else if (choice.equalsIgnoreCase("Toy")) {
+				new ShinchanSummerMerchandiseFactory().createToy();
+			} else {
+				System.out.println("Invalid Option..");
+			}
+		} 
+		else if (input.equalsIgnoreCase("Winter")) {
+			String choice = sc.next();
+			if (choice.equalsIgnoreCase("TShirt")) {
+				new ShinchanWinterMerchandiseFactory().createTShirt();
+			} else if (choice.equalsIgnoreCase("Hat")) {
+				new ShinchanWinterMerchandiseFactory().createHat();
+			} else if (choice.equalsIgnoreCase("Toy")) {
+				new ShinchanWinterMerchandiseFactory().createToy();
+			} else {
+				System.out.println("Invalid Option..");
+			}
+		} 
+		else {
+			System.out.println("Enter valid choice..");
+		}
+	}
+}
 class Main
 {
 	static int fact(int n)
