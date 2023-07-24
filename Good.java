@@ -1,3 +1,151 @@
+// abstract class ShinchanMerchandiseFactory
+// {
+// 	abstract public void createTShirt();
+// 	abstract public void createHat();
+// 	abstract public void createToy();
+// }
+// class ShinchanSummerMerchandiseFactory extends ShinchanMerchandiseFactory
+// {
+
+// 	@Override
+// 	public void createTShirt() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Summer TShirt..");
+// 	}
+
+// 	@Override
+// 	public void createHat() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Summer Hat..");
+// 	}
+
+// 	@Override
+// 	public void createToy() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Summer Toy..");
+// 	}
+	
+// }
+// class ShinchanWinterMerchandiseFactory extends ShinchanMerchandiseFactory
+// {
+
+// 	@Override
+// 	public void createTShirt() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Winter TShirt..");
+// 	}
+
+// 	@Override
+// 	public void createHat() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Winter Hat..");
+// 	}
+
+// 	@Override
+// 	public void createToy() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("Create Winter Toy..");
+// 	}
+	
+// }
+// abstract class ShinchanTShirt
+// {
+// 	abstract public void displayDesign();
+// }
+// abstract class ShinchanHat
+// {
+// 	abstract public void displayColor();
+// }
+// abstract class ShinchanToy
+// {
+// 	abstract public void displaySize();
+// }
+// class ShinchanSummerTShirt extends ShinchanTShirt
+// {
+	
+// 	@Override
+// 	public void displayDesign() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanSummerTShirt Size..");
+// 	}
+	
+// }
+// class ShinchanSummerHat extends ShinchanHat
+// {
+
+// 	@Override
+// 	public void displayColor() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanSummerHat Size..");
+// 	}
+	
+// }
+// class ShinchanSummerToy extends ShinchanToy
+// {
+
+// 	@Override
+// 	public void displaySize() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanSummerToy Size..");
+// 	}
+	
+// }
+// class ShinchanWinterTShirt extends ShinchanTShirt
+// {
+
+// 	@Override
+// 	public void displayDesign() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanWinterTShirt Size..");
+// 	}
+	
+// }
+// class ShinchanWinterHat extends ShinchanHat
+// {
+
+// 	@Override
+// 	public void displayColor() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanWinterHat Size..");
+// 	}
+	
+// }
+// class ShinchanWinterToy extends ShinchanToy
+// {
+
+// 	@Override
+// 	public void displaySize() {
+// 		// TODO Auto-generated method stub
+// 		System.out.println("ShinchanWinterToy Size..");
+// 	}
+	
+// }
+// public class Main {
+
+// 	public static void main(String[] args) {
+// 		// TODO Auto-generated method stub
+		
+// 	}
+
+// }
+
+
+// class Main
+// {
+// static void display(int steps)
+//         {
+//         		if (steps == 0)
+//                 {
+//                 	return;
+//                 }
+//         		System.out.println("Here..");
+//                 display(steps-1);
+//         }
+// 	public static void main(String args[])
+//     {
+//     	display(4);
+//     }
+// }
 package test;
 interface EnglishDubbing
 {
