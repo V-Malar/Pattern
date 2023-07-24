@@ -1,3 +1,80 @@
+package test;
+interface EnglishDubbing
+{
+	public void dubEnglish();
+}
+class JapaneseEpisode
+{
+	public void playInJapanese()
+	{
+		System.out.println("Playing in Japanese..");
+	}
+}
+class HindiDubbingAdapter implements EnglishDubbing
+{
+	JapaneseEpisode j;
+	public HindiDubbingAdapter()
+	{
+		
+	}
+	public HindiDubbingAdapter(JapaneseEpisode j)
+	{
+		this.j = j;
+	}
+	@Override
+	public void dubEnglish() {
+		// TODO Auto-generated method stub
+		j.playInJapanese();
+		System.out.println("Dubbed to Hindi..");
+	}
+	
+}
+class SpanishDubbingAdapter implements EnglishDubbing
+{
+	JapaneseEpisode j;
+	public SpanishDubbingAdapter()
+	{
+		
+	}
+	public SpanishDubbingAdapter(JapaneseEpisode j)
+	{
+		this.j = j;
+	}
+	@Override
+	public void dubEnglish() {
+		// TODO Auto-generated method stub
+		j.playInJapanese();
+		System.out.println("Dubbed to Spanish..");
+	}
+	
+}
+class EnglishDubbingAdapter implements EnglishDubbing
+{
+	JapaneseEpisode j;
+	public EnglishDubbingAdapter()
+	{
+		
+	}
+	public EnglishDubbingAdapter(JapaneseEpisode j)
+	{
+		this.j = j;
+	}
+	@Override
+	public void dubEnglish() {
+		// TODO Auto-generated method stub
+		j.playInJapanese();
+		System.out.println("Dubbed to English..");
+	}
+	
+}
+class Good
+{
+	public static void main(String[] args) {
+		new EnglishDubbingAdapter(new JapaneseEpisode()).dubEnglish();
+		new SpanishDubbingAdapter(new JapaneseEpisode()).dubEnglish();
+		new HindiDubbingAdapter(new JapaneseEpisode()).dubEnglish();
+	}
+}s
 //package test;
 //import java.util.HashMap;
 //import java.util.Map;
