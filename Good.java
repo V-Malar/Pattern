@@ -1,3 +1,90 @@
+package namespace;
+
+public class Adapter {
+	public static void main(String[] args) {
+		IndianStandardPlug Ip = new Sakthiman();
+		IndianStandardSocket Is = new Chotabeem();
+		AmericanStandardPlug as = new SupaStrikas();
+		IndianAdapter Ia=new IndianAdapter(as);
+		//Ia.am=as;
+		Is.roundsocket(Ia);
+//		Is.roundsocket(as);
+//		AP => IA(IS) => IS
+//		IOSplug => Android Adapter(Android Standard) => AndroidSocket
+	}
+}
+
+abstract class IndianStandardPlug {
+	abstract void roundpin();
+}
+
+abstract class IndianStandardSocket {
+	abstract void roundsocket(IndianStandardPlug ip);
+}
+
+abstract class AmericanStandardPlug {
+	abstract void slabpin();
+}
+
+abstract class AmericanStandardSocket {
+	abstract void slabsocket(AmericanStandardPlug ai);
+}
+
+class Sakthiman extends IndianStandardPlug {
+
+	@Override
+	void roundpin() {
+		System.out.println("Sakthiman - Indian Standard Plug");
+	}
+
+}
+
+class Chotabeem extends IndianStandardSocket {
+
+	@Override
+	public void roundsocket(IndianStandardPlug ip) {
+		System.out.println("Chotabeem - Indian Standard Socket");
+		ip.roundpin();
+
+	}
+
+}
+
+class SupaStrikas extends AmericanStandardPlug {
+
+	@Override
+	void slabpin() {
+		System.out.println("SupaStrikas - American Standard Plug");
+	}
+
+}
+
+class Soccer extends AmericanStandardSocket {
+
+	@Override
+	void slabsocket(AmericanStandardPlug ai) {
+		System.out.println("Soccer - American Standard Socket");
+
+	}
+
+}
+class IndianAdapter extends IndianStandardPlug{
+	AmericanStandardPlug am;
+	
+	
+	public IndianAdapter(AmericanStandardPlug am) {
+		super();
+		this.am = am;
+	}
+
+
+	@Override
+	void roundpin() {
+		am.slabpin();
+		
+	}
+	
+}
 package class1;
 
 import java.util.Scanner;
